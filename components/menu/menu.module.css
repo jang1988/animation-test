@@ -1,0 +1,55 @@
+.menu {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  z-index: 1;
+}
+
+.where, .what, .who {
+  position: absolute;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.where::after, .what::after, .who::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.where:hover, .what:hover, .who:hover {
+  color: white;
+}
+
+.where:hover::after, .what:hover::after, .who:hover::after {
+  width: 100%;
+}
+
+.where {
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.what {
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.who {
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}

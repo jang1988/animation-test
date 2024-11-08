@@ -1,0 +1,53 @@
+/* logo.module.css */
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.textTop, .textBottom {
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333;
+  background: linear-gradient(to top, #333 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: fillUp 1s cubic-bezier(0.75, 0, 0.75, 1) forwards;
+
+}
+
+@keyframes fillUp {
+  0% {
+    background-position: 0 0%;
+    -webkit-text-fill-color: transparent;
+  }
+  99% {
+    background-position: 0 99%;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background-position: 0 100%;
+    -webkit-text-fill-color: #333;
+  }
+}
+
+
+.textTop {
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.textBottom {
+  font-size: 24px;
+  line-height: 30px;
+}
